@@ -1,38 +1,404 @@
-.App {
+/* DESKTOP */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.header-flex {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: .5%;
+  font-family: Helvetica;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+.header-title {
+  font-size: 1.8rem;
+}
+
+.nike-icon svg {
+  height: 79px;
+  width: 79px;
+}
+
+.cart-icon svg {
+  height: 35px;
+  width: 35px;
+}
+
+.sneaker-grid {
+  display: grid;
+  gap: 2rem;
+  overflow-y: scroll;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  margin-left: 3%;
+  margin-right: 3%;
+  overflow: visible;
+  margin-bottom: 2%;
+}
+
+.sneaker-grid2 {
+  display: grid;
+  gap: 2rem;
+  overflow-y: scroll;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 500px)); */
+  grid-template-columns: repeat(auto-fit, minmax(20%, 30%)); 
+  margin-left: 3%;
+  margin-right: 3%;
+  overflow: visible;
+  margin-bottom: 2%;
+}
+
+.sneaker-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  border-radius: 4%;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.outer-img {
+  width: 50%;
+  height: 50%;
+}
+
+.sneaker-img {
+  height: auto;
+  width: 100%;
+}
+
+.misc-text-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -20%;
+  margin-bottom: 1%;
+  width: 90%;
+}
+
+.sneaker-text {
+  text-align: left;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.334;
+  margin-bottom: 3%;
+  width: 90%;
+  height: 10%;
+}
+
+.about-link {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1%;
+}
+
+.about-link:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.about-page-text {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1%;
+}
+
+button {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  height: 40px;
+  width: 250px;
+  font-size: 1.2rem;
+  border-radius: 4%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.continue-shopping-button {
+  height: 40px;
+  width: 250px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.thankyou-div {
+  margin-bottom: 1%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* MY CART CSS */
+
+.checkout-operation-button {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  height: 40px;
+  width: 45px;
+  font-size: 1.2rem;
+  border-radius: 4%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sneaker-flex {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 2%;
+}
+
+.subtotal-price {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1%;
+}
+
+/* MY CART CSS END */
+
+/* EXTERNAL CSS */
+.shopTitle {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.products {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.product {
+  border-radius: 15px;
+  width: 300px;
+  height: 350px;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product img {
+  width: 400px;
+}
+
+.product .description {
+  text-align: center;
+}
+
+.product:hover {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.addToCartBttn {
+  background-color: black;
+  border: 2px solid rgb(19, 19, 19);
+  min-width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+  margin-bottom: 7%;
+  width: 175px;
+}
+
+.addToCartBttn:hover {
+  background-color: rgb(19, 19, 19);
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cartItem {
+  width: 700px;
+  height: 250px;
+  display: flex;
+
+  align-items: center;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  margin: 30px;
+}
+
+.cartItem img {
+  width: 200px;
+}
+
+.cartItem .description {
+  width: 100%;
+  font-size: 30px;
+}
+
+.countHandler {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  margin-bottom: 6%;
+}
+
+.countHandler input {
+  width: 40px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.checkout button {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* EXTERNAL CSS END */
+
+/* MOBILE */
+
+@media only screen and (max-width: 430px) {
+  .header-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 1%;
+      font-family: Helvetica;
+      margin-left: 0;
+      margin-right: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header-title {
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 0% 15%;
   }
+
+  .nike-icon svg {
+      height: 63px;
+      width: 63px;
+  }
+
+  .cart-icon svg {
+      height: 35px;
+      width: 35px;
+  }
+
+  .cart-icon {
+      width: 63px;
+      height: 67px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .nike-icon {
+      margin-left: 2%;
+  }
+
+  .sneaker-grid {
+      margin-bottom: 10%;
+      /* grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); */
+      grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+      gap: 1rem;
+  }
+
+  .sneaker-grid2 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+  }
+
+  .sneaker-text {
+      font-size: 1.1rem;
+  }
+
+  .addToCartBttn {
+      /* margin-top: 15%; */
+      height: 50px;
+  }
+
+  .about-link {
+      font-size: 1.2rem;
+      margin-bottom: 7%;
+  }
+
+  .about-page-text {
+      text-align: left;
+      font-size: 1.5rem;
+      margin-top: 1%;
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+
+  .about-page-text p {
+      margin-bottom: 1%;
+  }
+
+  button {
+      height: 40px;
+      width: 120px;
+      font-size: 1rem;
+  }
+
+  .continue-shopping-button {
+      height: 40px;
+      width: 120px;
+      text-align: center;
+  }
+
+  .checkout {
+      margin-top: 3%;
+      margin-bottom: 3%;
+  }
+
+  .button-div {
+      margin-bottom: 5%;
+  }
+
 }
